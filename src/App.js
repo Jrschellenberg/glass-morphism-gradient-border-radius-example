@@ -19,7 +19,7 @@ function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderW
             <div className="right" />
             <div className="top" />
             <div className="bottom" />
-            <div>
+            <div className="glass-morphism">
               {children}
             </div>
           </div>
@@ -33,7 +33,7 @@ function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderW
 function App () {
   return (
       <GlassMorphism
-        colorLeft="red"
+
         borderRadius="20px"
       >
         <span>Element text is here wow!</span>

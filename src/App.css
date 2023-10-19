@@ -1,9 +1,9 @@
 :root {
   --border-width: 10px;
-  --color-left: red;
-  --color-right: orange;
+  --color-left: rgba(154, 238, 235, 0.72);
+  --color-right: rgba(102, 156, 248, 0.16);
+  --border-radius: 150px;
 }
-
 
 .App {
   text-align: center;
@@ -13,7 +13,6 @@
   width: 80%;
   margin: auto;
 }
-
 
 .App-header {
   background-color: #282c34;
@@ -26,7 +25,6 @@
   color: white;
 }
 
-
 .wrapper {
   position: relative;
   height: 300px;
@@ -37,7 +35,6 @@
   position: absolute;
   width: 0;
   height: 0;
-  border-radius: 50px;
 }
 
 .left,.right {
@@ -47,7 +44,8 @@
 
 .top,.bottom {
   height: var(--border-width);
-  width: 100%;
+  width: calc(100% - var(--border-width) - var(--border-width));
+  margin: 0 var(--border-width);
   background: linear-gradient(to right, var(--color-left), var(--color-right));
 }
 
@@ -55,19 +53,25 @@
   left: 0;
   top: 0;
   background: var(--color-left);
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
 }
 
 .right {
   right: 0;
   top: 0;
   background: var(--color-right);
+  border-bottom-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
 }
 
 .top {
   top: 0;
   left: 0;
+
 }
 .bottom {
   bottom: 0;
   left: 0;
+
 }

@@ -1,8 +1,8 @@
 :root {
-  --border-width: 10px;
   --color-left: rgba(154, 238, 235, 0.72);
   --color-right: rgba(102, 156, 248, 0.16);
   --border-radius: 150px;
+  --border-width: 10px;
 }
 
 .App {

@@ -2,7 +2,7 @@
   --color-left: rgba(154, 238, 235, 0.72);
   --color-right: rgba(102, 156, 248, 0.16);
   --border-radius: 150px;
-  --border-width: 10px;
+  --border-width: 4px;
 }
 
 .App {
@@ -36,12 +36,9 @@
 .glass-morphism {
   height: 300px;
   width: 100%;
-  background: linear-gradient(164.14deg, rgba(13, 8, 27, 0.35) -2.54%, rgba(71, 64, 94, 0.7) 100.24%),
-  linear-gradient(269.14deg, rgba(154, 238, 235, 0.72) -2.46%, rgba(102, 156, 248, 0.16) 104.71%);
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 2.5px );
-  border-radius: var(--border-radius);
-  -webkit-backdrop-filter: blur( 2.5px );
+  border-radius: 18px;
+  background: linear-gradient(164deg, rgba(13, 8, 27, 0.35) -2.54%, rgba(71, 64, 94, 0.70) 100.24%);
+  backdrop-filter: blur(20px);
 }
 
 .left,.right,.top,.bottom {

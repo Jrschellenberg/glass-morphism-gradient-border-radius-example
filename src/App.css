@@ -1,0 +1,73 @@
+:root {
+  --border-width: 10px;
+  --color-left: red;
+  --color-right: orange;
+}
+
+
+.App {
+  text-align: center;
+}
+
+.center-horizontal {
+  width: 80%;
+  margin: auto;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+
+.wrapper {
+  position: relative;
+  height: 300px;
+  padding: var(--border-width);
+}
+
+.left,.right,.top,.bottom {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-radius: 50px;
+}
+
+.left,.right {
+  width: var(--border-width);
+  height: 100%;
+}
+
+.top,.bottom {
+  height: var(--border-width);
+  width: 100%;
+  background: linear-gradient(to right, var(--color-left), var(--color-right));
+}
+
+.left {
+  left: 0;
+  top: 0;
+  background: var(--color-left);
+}
+
+.right {
+  right: 0;
+  top: 0;
+  background: var(--color-right);
+}
+
+.top {
+  top: 0;
+  left: 0;
+}
+.bottom {
+  bottom: 0;
+  left: 0;
+}

@@ -1,13 +1,22 @@
-import { useRef } from 'react';
-import './App.css';
+import { useRef, useEffect, useState } from 'react';
+import './App.scss';
 
 import { LineLeft, LineRight, } from './components'
 
 
 function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderWidth}) {
-  const ref = useRef()
+  const [height, setHeight] = useState(0);
+  const ref = useRef(null)
 
-  console.log("ref", ref.current);
+  useEffect(() => {
+    if(!ref?.current?.clientHeight){
+      return;
+    }
+    setHeight(ref?.current?.clientHeight)
+
+    console.log("ref", ref?.current?.clientHeight);
+  }, [setHeight])
+
   return (
     <div className="App"
       style={{
@@ -23,7 +32,7 @@ function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderW
           <div className="wrapper" ref={ref}>
             <div className="left" >
               <LineLeft
-                height={484}
+                height={height}
               />
             </div>
             <div className="right" >

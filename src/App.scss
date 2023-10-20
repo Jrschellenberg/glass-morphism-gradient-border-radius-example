@@ -71,6 +71,10 @@
   right: 0;
   top: 0;
 
+  svg, svg * {
+    stroke: var(--color-right);
+  }
+
 }
 
 .top {

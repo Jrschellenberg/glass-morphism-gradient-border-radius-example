@@ -1,10 +1,13 @@
 import App from "../App";
 
-function LineLeft({width, height = "484"}){
+function LineLeft({height = 484}){
+  if(!height){
+    return null;
+  }
   return (
       <svg width="47" height={height} viewBox={`0 0 47 ${height}`} fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_b_423_624)">
-          <path d={`M47 2H20C10.0589 2 2 10.0589 2 20V464C2 473.941 10.0589 482 20 482H47`} stroke="url(#paint0_linear_423_624)" strokeWidth="4"/>
+          <path d={`M47 2H20C10.0589 2 2 10.0589 2 20V${height-20}C2 ${height - 10.059} 10.0589 ${height-2} 20 ${height-2}H47`} stroke="url(#paint0_linear_423_624)" strokeWidth="4"/>
         </g>
         <defs>
           <filter id="filter0_b_423_624" x="-40" y="-40" width="127" height="564" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">

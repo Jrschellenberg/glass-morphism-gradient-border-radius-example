@@ -36,7 +36,9 @@ function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderW
               />
             </div>
             <div className="right" >
-              <LineRight />
+              <LineRight
+                  height={height}
+              />
             </div>
 
             <div className="top" />

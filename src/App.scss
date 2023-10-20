@@ -55,8 +55,8 @@
 
 .top,.bottom {
   height: var(--border-width);
-  left: 20px;
-  width: 98%;
+  left: 43px;
+  width: calc(100% - 93px);
   margin: 0 var(--border-width);
   background: linear-gradient(to right, var(--color-left), var(--color-right));
 }
@@ -65,16 +65,18 @@
   left: 0;
   top: 0;
 
+  svg, svg * {
+    stroke: var(--color-left);
+  }
+
 }
 
 .right {
   right: 42px;
   top: 0;
-
   svg, svg * {
     stroke: var(--color-right);
   }
-
 }
 
 .top {

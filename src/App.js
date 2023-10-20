@@ -1,7 +1,13 @@
+import { useRef } from 'react';
 import './App.css';
+
+import { LineLeft, LineRight, } from './components'
 
 
 function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderWidth}) {
+  const ref = useRef()
+
+  console.log("ref", ref.current);
   return (
     <div className="App"
       style={{
@@ -14,9 +20,16 @@ function GlassMorphism({ children , colorLeft, colorRight, borderRadius, borderW
     >
       <div className="App-header">
         <div className="center-horizontal">
-          <div className="wrapper">
-            <div className="left" />
-            <div className="right" />
+          <div className="wrapper" ref={ref}>
+            <div className="left" >
+              <LineLeft
+                height={484}
+              />
+            </div>
+            <div className="right" >
+              <LineRight />
+            </div>
+
             <div className="top" />
             <div className="bottom" />
             <div className="glass-morphism">

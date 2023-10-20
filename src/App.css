@@ -1,6 +1,7 @@
 :root {
-  --color-left: rgba(154, 238, 235, 0.72);
-  --color-right: rgba(102, 156, 248, 0.16);
+  --color-left: rgba(102, 156, 248, 0.16);
+  --color-right: rgba(154, 238, 235, 0.72);
+
   --border-radius: 150px;
   --border-width: 4px;
 }
@@ -54,7 +55,8 @@
 
 .top,.bottom {
   height: var(--border-width);
-  width: calc(100% - var(--border-width) - var(--border-width));
+  left: 20px;
+  width: 98%;
   margin: 0 var(--border-width);
   background: linear-gradient(to right, var(--color-left), var(--color-right));
 }
@@ -62,26 +64,18 @@
 .left {
   left: 0;
   top: 0;
-  background: var(--color-left);
-  border-top-left-radius: var(--border-radius);
-  border-bottom-left-radius: var(--border-radius);
+
 }
 
 .right {
   right: 0;
   top: 0;
-  background: var(--color-right);
-  border-bottom-right-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+
 }
 
 .top {
   top: 0;
-  left: 0;
-
 }
 .bottom {
   bottom: 0;
-  left: 0;
-
 }

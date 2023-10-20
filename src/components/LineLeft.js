@@ -1,5 +1,3 @@
-import App from "../App";
-
 function LineLeft({height = 484}){
   if(!height){
     return null;
